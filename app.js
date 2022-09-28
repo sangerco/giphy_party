@@ -1,6 +1,6 @@
 const gifLocation = document.querySelector('.col-6');
 const searchInput = $("#search-for-gifs");
-const removeBtn = document.getElementById('remove');
+// const removeBtn = document.getElementById('remove');
 
 
 function addGif(res) {
@@ -33,8 +33,8 @@ $("form").on("submit", async function(evt) {
   addGif(response.data);
 });
 
-const remove = document.querySelector(".remove");
-const imgDiv = document.querySelector(".imgDiv")
+// const remove = document.querySelector(".remove");
+// const imgDiv = document.querySelector(".imgDiv")
 
 $('#remove').on("click", function() {
     $('.deleteImg').remove();
