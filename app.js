@@ -8,7 +8,7 @@ function addGif(res) {
   if (num) {
     let idx = Math.floor(Math.random() * num);
     let newDiv = document.createElement('div');
-    newDiv.classList.add('remove')
+    newDiv.classList.add('deleteImg')
     let imgDiv = document.createElement('div');
     imgDiv.classList.add('imgDiv')
     imgDiv.innerHTML += `<img src=${res.data[idx].images.original.url}>`;
@@ -36,11 +36,7 @@ $("form").on("submit", async function(evt) {
 const remove = document.querySelector(".remove");
 const imgDiv = document.querySelector(".imgDiv")
 
-// $('#remove').on("click", function() {
-//     let deleted = remove.removeChild(imgDiv);
-//     console.log(deleted);
-// });
+$('#remove').on("click", function() {
+    $('.deleteImg').remove();
+});
 
-removeBtn.addEventListener("click", function(event) {
-        event.target.imgDiv.remove();
-    });
